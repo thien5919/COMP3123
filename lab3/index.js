@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
 
         if (req.url === '/employee/totalsalary') {
             //TODO - Display Sum of all employees salary in given JSON format 
-            //e.g. { "total_salary" : 100 }  
+                //e.g. { "total_salary" : 100 }  
     }
     res.end(`{"error": "${http.STATUS_CODES[404]}"}`)
     }
