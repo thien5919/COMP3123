@@ -62,12 +62,20 @@ app.use((err,req,res,next) => {
 
 - Why is `express.Router()` used in Express.js applications, and how does it benefit the code structure?
 
+* 'express.Router() is a function to create a new Router object with the purpose of using handle routers in the application.
+
 **7. Error Handling in Express.js**
 
 - How would you implement error handling in the Express routes to ensure that any issues (such as file not found or server errors) are appropriately handled? Provide an example.
 
----
+* Add handle Middleware to handle error
+Example:
 
+   app.use((err,req,res,next) => {
+   console.error(err.stack);
+   res.status(500).send('Server Error');
+   });
+* use try..catch block or throw errors directly.
 #### Section C: Bonus
 
 **7. Dynamic Port Binding in Express.js**
